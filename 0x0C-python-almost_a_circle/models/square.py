@@ -12,7 +12,7 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Returns string info about this square.'''
-        return '[{}] ({}) {}/{}'.\
+        return '[{}] ({}) {}/{} - {}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width)
 
     @property
@@ -40,7 +40,7 @@ class Square(Rectangle):
         '''Updates instance attributes via no-keyword & keyword args.'''
         if args:
             self.__update(*args)
-        if **kwargs:
+        elif kwargs:
             self.__update(**kwargs)
 
     def to_dictionary(self):
