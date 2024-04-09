@@ -29,4 +29,4 @@ class Rectangle {
   }
 }
 
-module.exports = REctangle;
+module.exports = Rectangle;
