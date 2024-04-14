@@ -31,12 +31,12 @@ if __name__ == '__main__':
                 name LIKE BINARY %(name)s
             ORDER BY
                 states.id ASC
-            """, {
-                'name': argv[4]
-            })
+        """, {
+            'name': argv[4]
+        })
 
-            rows = cur.fetchall()
+        rows = cur.fetchall()
 
-    if rows in not None:
+    if rows is not None:
         for row in rows:
             print(row)
