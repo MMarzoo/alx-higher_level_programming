@@ -9,4 +9,3 @@ request.get(url, function (error, response) {
   } else {
     console.log('code:' + ' ' + response.statusCode);
   }
-});
