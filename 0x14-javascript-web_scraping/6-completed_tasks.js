@@ -9,12 +9,15 @@ request.get(process.argv[2], { json: true }, (error, response, body) => {
     return;
   }
 
-  const taskCompleted = {};
-  body.forEach(todo) => {
-    if (todo.completed[todo.userId]) {
-      taskCompleted[todo.userId] = 1;
-    } else {
-      taskCompleted[todo.userId] += 1;
+  const tasksCompleted = {};
+  body.forEach((todo) => {
+    if (todo.completed) {
+      if (!tasksCompleted[todo.userId]) {
+        tasksCompleted[todo.userId] = 1;
+      } else {
+        tasksCompleted[todo.userId] += 1;
+      }
     }
-  }
+  });
+  console.log(tasksCompleted);
 });
