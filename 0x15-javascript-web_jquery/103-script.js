@@ -12,7 +12,7 @@ $('document').ready(function () {
   });
 
   function translate () {
-    const url = 'https://www.fourtonfish.com/hellosalut/?';
+    const url = 'https://hellosalut.stefanbohacek.dev/?lang=';
     $.get(url + $.param({ lang: $('INPUT#language_code').val() }), function (data) {
       $('DIV#hello').html(data.hello);
     });
